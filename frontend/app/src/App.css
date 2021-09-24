@@ -1,0 +1,190 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.login__container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  background: rgb(30, 77, 255);
+  background: linear-gradient(62deg, rgba(30, 77, 255, 1) 0%, rgba(45, 64, 147, 1) 46%, rgba(20, 30, 96, 1) 81%, rgba(7, 12, 69, 1) 100%);
+}
+
+.login__card {
+  position: relative;
+  background-color: white;
+  padding: 40px 20px;
+  width: Min(500px, 100%);
+  border-radius: 18px;
+  margin: 10px 5px;
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.login__input {
+  position: relative;
+  width: 100%;
+}
+
+.login__input input{
+  z-index: 2;
+  position: relative;
+  background: white;
+  width: 100%;
+  margin: 10px 5px;
+  padding: 10px 10px;
+  border-radius: 1px solid rgba(125,125,125, 0.5);
+  border-radius: 7px;
+}
+
+.login__input .input__place-holder {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 15px;
+  color: rgb(69, 69, 69);
+  border-radius: 7px;
+  background-color: white;
+  pointer-events: none;
+  transition: all 0.2s linear;
+}
+
+.login__input input:focus ~ .input__place-holder {
+  top: -2px;
+} 
+.login__input input:valid ~ .input__place-holder {
+  top: -2px;
+} 
+
+
+.login__input input:focus {
+  outline: none;
+}
+
+.login__submit {
+  width: 100%;
+  display: grid;
+  padding-top: 30px;
+  place-items: center;
+}
+
+.login__submit .login__btn {
+  text-align: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #2448D5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.loader {
+  color            : #ffffff;
+  font-size        : 20px;
+  margin           : 0px auto;
+  width            : 1em;
+  height           : 1em;
+  border-radius    : 50%;
+  position         : relative;
+  text-indent      : -9999em;
+  -webkit-animation: load4 1.3s infinite linear;
+  animation        : load4 1.3s infinite linear;
+  transform        : translateZ(0) scale(0.2);
+}
+
+@-webkit-keyframes load4 {
+
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+
+@keyframes load4 {
+
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+
+p.fail {
+  color: red;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+
+p.success {
+  color: green;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
